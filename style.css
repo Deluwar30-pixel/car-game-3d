@@ -120,7 +120,7 @@ canvas {
   color: #666 !important;
 }
 
-/* Mobile Controls - গেমের নিচে, APK-র জন্য উপরে তোলা */
+/* Mobile Controls */
 .mobile-controls {
   position: fixed;
   bottom: 90px;
@@ -155,12 +155,10 @@ canvas {
   transform: scale(0.9);
 }
 
-/* ডেস্কটপে মোবাইল কন্ট্রোল লুকাও */
 @media (min-width: 768px) {
   .mobile-controls { display: none; }
 }
 
-/* ছোট মোবাইলের জন্য */
 @media (max-width: 480px) {
   .hud-box { padding: 6px 14px; }
   .hud-box .value { font-size: 18px; }
