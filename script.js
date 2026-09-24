@@ -12,7 +12,7 @@ camera.lookAt(0, 0, 0);
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
-renderer.shadowMap.enabled = true;
+renderer.shadowMap.enabled = false;
 container.appendChild(renderer.domElement);
 
 // Lights
@@ -101,9 +101,9 @@ function createTree(x, z) {
   return tree;
 }
 
-for (let i = 0; i < 40; i++) {
-  scene.add(createTree(-8 - Math.random() * 4, -i * 10 - Math.random() * 5));
-  scene.add(createTree(8 + Math.random() * 4, -i * 10 - Math.random() * 5));
+for (let i = 0; i < 15; i++) {
+  scene.add(createTree(-8 - Math.random() * 4, -i * 25 - Math.random() * 5));
+  scene.add(createTree(8 + Math.random() * 4, -i * 25 - Math.random() * 5));
 }
 
 // -------- স্ট্রিট লাইট --------
@@ -127,10 +127,7 @@ function createStreetLight(x, z) {
   bulb.position.y = 5;
   light.add(bulb);
 
-  const pointLight = new THREE.PointLight(0xfbbf24, 1.5, 15);
-  pointLight.position.set(0, 5, 0);
-  light.add(pointLight);
-
+  
   light.position.set(x, 0, z);
   return light;
 }
@@ -171,14 +168,15 @@ function createBuilding(x, z, height) {
   return building;
 }
 
-for (let i = 0; i < 25; i++) {
+
+for (let i = 0; i < 10; i++) {
   const h = 3 + Math.random() * 8;
-  scene.add(createBuilding(-20 - Math.random() * 15, -i * 15 - Math.random() * 10, h));
-  scene.add(createBuilding(20 + Math.random() * 15, -i * 15 - Math.random() * 10, h));
+  scene.add(createBuilding(-20 - Math.random() * 15, -i * 30 - Math.random() * 10, h));
+  scene.add(createBuilding(20 + Math.random() * 15, -i * 30 - Math.random() * 10, h));
 }
 
 // -------- তারাময় আকাশ --------
-for (let i = 0; i < 150; i++) {
+for (let i = 0; i < 50; i++) {
   const starGeo = new THREE.SphereGeometry(0.08, 4, 4);
   const starMat = new THREE.MeshStandardMaterial({
     color: 0xffffff,
