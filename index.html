@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+  <title>🚗 3D Car Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="game-container"></div>
+
+  <!-- HUD -->
+  <div class="hud">
+    <div class="hud-box">
+      <span class="label">SCORE</span>
+      <span class="value" id="score">0</span>
+    </div>
+    <div class="hud-box">
+      <span class="label">BEST</span>
+      <span class="value" id="highScore">0</span>
+    </div>
+  </div>
+
+  <!-- Start Screen -->
+  <div class="overlay" id="overlay">
+    <div class="overlay-content">
+      <h1>🚗 3D Car Game</h1>
+      <p>বাধা এড়িয়ে গাড়ি চালাও!</p>
+      <button id="startBtn">▶️ Start Game</button>
+      <p class="hint">কীবোর্ড: ← → চাপো | মোবাইল: নিচের বাটন</p>
+    </div>
+  </div>
+
+  <!-- Mobile Controls -->
+  <div class="mobile-controls">
+    <button class="ctrl-btn" id="leftBtn">◀</button>
+    <button class="ctrl-btn" id="rightBtn">▶</button>
+  </div>
+
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
