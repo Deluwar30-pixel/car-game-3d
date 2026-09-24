@@ -120,10 +120,10 @@ canvas {
   color: #666 !important;
 }
 
-/* Mobile Controls */
+/* Mobile Controls - গেমের নিচে, APK-র জন্য উপরে তোলা */
 .mobile-controls {
   position: fixed;
-  bottom: 30px;
+  bottom: 90px;
   left: 0;
   right: 0;
   display: flex;
@@ -158,4 +158,12 @@ canvas {
 /* ডেস্কটপে মোবাইল কন্ট্রোল লুকাও */
 @media (min-width: 768px) {
   .mobile-controls { display: none; }
+}
+
+/* ছোট মোবাইলের জন্য */
+@media (max-width: 480px) {
+  .hud-box { padding: 6px 14px; }
+  .hud-box .value { font-size: 18px; }
+  .ctrl-btn { width: 70px; height: 70px; font-size: 26px; }
+  .overlay-content h1 { font-size: 28px; }
 }
